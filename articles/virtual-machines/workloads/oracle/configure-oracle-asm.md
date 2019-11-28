@@ -312,7 +312,7 @@ For this tutorial, the default user is *grid* and the default group is *asmadmin
 8. List Oracle ASM disks:
 
    ```bash
-   service oracleasm listdisks
+   oracleasm listdisks
    ```   
 
    The output of the command should list off the following Oracle ASM disks:
