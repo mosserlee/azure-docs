@@ -115,9 +115,9 @@ For more information about installing Oracle ASM, see [Oracle ASMLib Downloads f
     The output of this command should list the following components:
 
     ```bash
-oracleasm-support-2.1.11-2.el7.x86_64
-oracleasmlib-2.0.12-1.el7.x86_64
-kmod-oracleasm-2.0.8-26.0.1.el7.x86_64
+    oracleasm-support-2.1.11-2.el7.x86_64
+    oracleasmlib-2.0.12-1.el7.x86_64
+    kmod-oracleasm-2.0.8-26.0.1.el7.x86_64
     ```
 
 4. ASM requires specific users and roles in order to function correctly. The following commands create the pre-requisite user accounts and groups: 
