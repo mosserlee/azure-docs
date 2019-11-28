@@ -277,35 +277,36 @@ For this tutorial, the default user is *grid* and the default group is *asmadmin
 6. Check the Oracle ASM service status and start the Oracle ASM service:
 
    ```bash
-   service oracleasm status 
-   service oracleasm start
+   oracleasm init 
+   oracleasm status
    ```
 
    The output of the command should look like the following:
    
    ```bash
-   Checking if ASM is loaded: no
-   Checking if /dev/oracleasm is mounted: no
-   Initializing the Oracle ASMLib driver:                     [  OK  ]
-   Scanning the system for Oracle ASMLib disks:               [  OK  ]
+   Creating /dev/oracleasm mount point: /dev/oracleasm
+   Loading module "oracleasm": oracleasm
+   Configuring "oracleasm" to use device physical block size
+   Mounting ASMlib driver filesystem: /dev/oracleasm
+   
+   Checking if ASM is loaded: yes
+   Checking if /dev/oracleasm is mounted: yes
    ```
 
 7. Create Oracle ASM disks:
 
    ```bash
-   service oracleasm createdisk ASMSP /dev/sdc1 
-   service oracleasm createdisk DATA /dev/sdd1 
-   service oracleasm createdisk DATA1 /dev/sde1 
-   service oracleasm createdisk FRA /dev/sdf1
+   createdisk ASMSP /dev/sdc1 
+   createdisk DATA /dev/sdd1 
+   createdisk DATA1 /dev/sde1 
+   createdisk FRA /dev/sdf1
    ```    
 
    The output of the command should look like the following:
 
    ```bash
-   Marking disk "ASMSP" as an ASM disk:                       [  OK  ]
-   Marking disk "DATA" as an ASM disk:                        [  OK  ]
-   Marking disk "DATA1" as an ASM disk:                       [  OK  ]
-   Marking disk "FRA" as an ASM disk:                         [  OK  ]
+   Writing disk header: done
+   Instantiating disk: done
    ```
 
 8. List Oracle ASM disks:
