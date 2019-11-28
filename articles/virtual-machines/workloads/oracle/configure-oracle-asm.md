@@ -296,10 +296,10 @@ For this tutorial, the default user is *grid* and the default group is *asmadmin
 7. Create Oracle ASM disks:
 
    ```bash
-   createdisk ASMSP /dev/sdc1 
-   createdisk DATA /dev/sdd1 
-   createdisk DATA1 /dev/sde1 
-   createdisk FRA /dev/sdf1
+   oracleasm createdisk ASMSP /dev/sdc1 
+   oracleasm createdisk DATA /dev/sdd1 
+   oracleasm createdisk DATA1 /dev/sde1 
+   oracleasm createdisk FRA /dev/sdf1
    ```    
 
    The output of the command should look like the following:
